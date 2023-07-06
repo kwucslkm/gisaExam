@@ -1,4 +1,4 @@
-public class Exam1 {
+public class exam_20_2_19 {
     public static void main(String[] args) {
         Parent pa = new Child();
         pa.show();
