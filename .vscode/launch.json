@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "exam_",
+            "request": "launch",
+            "mainClass": "exam_",
+            "projectName": "gisaExam_65b03c68"
+        },
+        {
+            "type": "java",
             "name": "exam_22_3_19",
             "request": "launch",
             "mainClass": "exam_22_3_19",
