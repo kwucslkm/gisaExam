@@ -4,7 +4,6 @@ void main(){
     while(i<3){
         sum=sum+fo();
         i++;
-
     }
     printf("sum=%d\n",sum);
 }
