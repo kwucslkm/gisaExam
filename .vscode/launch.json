@@ -1,29 +1,45 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "exam_",
+      "request": "launch",
+      "mainClass": "exam_",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
+      "type": "java",
+      "name": "exam_22_3_19",
+      "request": "launch",
+      "mainClass": "exam_22_3_19",
+      "projectName": "gisaExam-1_90c308da"
+    },
+    {
+      "type": "java",
+      "name": "exam_22_3_18",
+      "request": "launch",
+      "mainClass": "exam_22_3_18",
+      "projectName": "gisaExam-1_90c308da"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/gisaExam/C",
+      "program": "d:/gisaExam/C/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
         {
-            "type": "java",
-            "name": "exam_",
-            "request": "launch",
-            "mainClass": "exam_",
-            "projectName": "gisaExam_65b03c68"
-        },
-        {
-            "type": "java",
-            "name": "exam_22_3_19",
-            "request": "launch",
-            "mainClass": "exam_22_3_19",
-            "projectName": "gisaExam-1_90c308da"
-        },
-        {
-            "type": "java",
-            "name": "exam_22_3_18",
-            "request": "launch",
-            "mainClass": "exam_22_3_18",
-            "projectName": "gisaExam-1_90c308da"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ]
+    }
+  ]
 }
