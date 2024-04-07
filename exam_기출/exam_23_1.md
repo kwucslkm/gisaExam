@@ -87,6 +87,7 @@ main(){
     }
     printf("%d",sum);
 }
+```
 
 10. IP(Internet Protocol) 의 주요 구성원 중  하나로, OSI 계층 모델의 네트워크 계층에 속한다.
     네트워크 컴퓨터의 운영체제에서 오류 메시지를 수신하거나, 전송 경로를 변경하는 등 오류 처리를 위한 제어 메시지를 주로 취급한다. 관련된 도구로 traceroute, ping 이 있으며, Ping of death와 같은 네트워크 공격 기법에 활용되기도 한다.
@@ -123,6 +124,138 @@ main(){
     - 상태(State)
     - 전략(Strategy)
     - 템플릿 메소드(Template Method)
-    - 방문자(Visitor)
 
- 
+12. 릴레이션을 구성하는 용어
+    1. 튜플 : 릴레이션을 구성하는 각각의 행을 의미하며, 파일 구조에서는 레코드에 해당함
+    2. 릴레이션 인스턴스 : 데이터 개체를 구성하고 있는 속성들에 데이터 타입이 정의되어 구체적인 데이터 값을 가진 것으로, 실제 값을 가진 튜플을 의미함
+    3. 카디널리티 : 튜플의 개수
+13. <학생> 테이블에서 '이름'이 '민수'인 튜플을 삭제하고자 한다. 다음 <처리조건>을 참조 하여 SQL을 작성하시오.
+    <처리 조건>
+    - 최소한의 코드로 작성될 수 있도록 SQL문을 구성한다.
+    - 명령문 마지막의 세미콜론(;)은 생략이 가능하다.
+    - 인용 부호가 필요한 경우 작은 따옴표('')를 사용한다.
+```sql
+    ==>  DELETE FROM 학생 WHERE 이름 = '민수'
+```
+14. c언어 
+```c
+#include <stdiolh>
+void swap(int*a, intidx1, int idx2){
+    int t = a[idx1];
+    a[idx1]=a[idx2];
+    a[idx2]=t;
+}
+void Usort(int*a, int len){
+    for(int i=0 ; i< len-1 ; i++)
+        for(int j=0 ; j< len -1-i ; j++)
+            if (a[j]>a[j+1])
+                swap(a, j, j+1);
+
+}
+main() {
+    int a[]={85,75,50, 100,95};
+    int nx = 5;
+    Usort(a,(nx));
+}
+
+```
+15. 파이썬 
+```python
+asia={'한국', '중국', '일본'}
+asia.add('베트남')
+asia.remove('일본')
+asia.update({'한국','홍콩','태국'})
+print(asia)
+```
+==> {'한국', '중국','베트남','홍콩','태국'}
+16. <성적> 테이블에서 과목별 점수의 평균이 90점 이상인 '과목이름', '최소점수', '최대점수'를 검색하고자 한다. <처리조건>을 참고하여 SQL을 작성하시오.
+<처리조건>
+    - 최소한의 코드로 작성될 수 있도록 SQL문을 구성한다.
+    - WHERE문은 사용하지 않는다.
+    - GROUP BY 와 HAVING 을 이용한다.
+    - 집계함수(Aggregation Function)를 사용하여 명령문을 구성한다.
+    - '최소점수', '최대점수'는 별칭(Alias) 을 위한 AS문을 이용한다.
+    - 명령문 마지막의 세미콜론(;)은 생략이 가능하다.
+    - 인용 부호가 필요한 경우 작은 따옴표('')를 사용한다.
+```sql
+SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수
+FROM 성적
+GROUP BY 과목이름 
+HAVING AVG(점수) >= 90;
+```
+* DML(Data Manipulation Language)
+ - select
+ - insert
+ - delete
+ - update
+
+17. java
+```java
+abstract class Vehicle{
+    String name;
+    abstract public String getName(String val);
+    public String getName(){
+        return "Vehicle name: " + name;
+    }
+}
+public class Test {
+    public static void main(String[] args){
+        Vehicle obj = new Car("Spark");
+        System.out.print(obj.getName());
+    }
+}
+class Car extends Vehicle {
+    private String name;
+    public Car(String val){
+        name = super.name = val;
+    }
+    public String getName(String val){
+        return "Car name: " + val;
+    }
+    public String getName(byte[] val){
+        return "Car name : " + val;
+    }
+}
+==> Vehicle name: Spark
+```
+18. 스키마
+ - 개념 스키마 
+    - 데이터베이스의 전체적인 논리적 구조로, 모든 응용 프로그램이나 사용자들이 필요로 하는 데이터를 종합한 조직 전체의 데이터베이스이다.
+    - 개체 간의 관계와 제약 조건을 나타내고, 데이터베이스의 접근 권한, 보안 및 무결성 규칙에 관한 명세를 정의함.
+ - 내부 스키마
+    - 물리적 저장장치의 입장에서 본 데이터베이스 구조
+    - 실제로 저장될 레코드의 형식, 저장 데이터 항목의 표현 방법, 내부 레코드의 물리적 순서 등을 나타낸다.
+ - 외부 스키마
+    - 사용자나 응용 프로그래머가 각 개인의 입장에서 필요로 하는 데이터베이스의 논리적 구조를 정의한 것이다.
+
+19. 분기 커버리지
+
+20. java 결과
+```java
+class Parent{
+    int x = 1000;
+    Parent(){
+        this(3000);
+    }
+    Parent(int x){
+        this.x = x;
+    }
+}
+public class Test{
+    public static void main(Stirng[] args)
+        Child c = new Child();
+        System.out.println(c.getX());
+}
+class Child extends Parent{
+    int x = 4000;
+    Child(){
+        this(5000);
+    }
+    Child(int x){
+        this.x = x;
+    }
+    int getX(){
+        return this.x;
+    }
+}
+```

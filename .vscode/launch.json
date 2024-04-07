@@ -1,7 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
+    {
+      "type": "java",
+      "name": "exam_23_1_20",
+      "request": "launch",
+      "mainClass": "exam_23_1_20",
+      "projectName": "gisaExam-1_cc0fc18b"
+    },
     {
       "type": "java",
       "name": "exam_",
