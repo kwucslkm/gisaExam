@@ -18,7 +18,7 @@ class SubObject extends SuperObject{
         System.out.print('D');
     }
 }
-public class Test{
+public class exam_23_3_1{
     public static void main(String[] args){
         SuperObject a= new SubObject();
         a.paint();
