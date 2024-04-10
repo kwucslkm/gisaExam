@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "exam_22_3_4",
+      "request": "launch",
+      "mainClass": "exam_22_3_4",
+      "projectName": "gisaExam-1_ba92c80c"
+    },
+    {
+      "type": "java",
       "name": "exam_22_2_17",
       "request": "launch",
       "mainClass": "exam_22_2_17",
