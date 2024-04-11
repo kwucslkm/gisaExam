@@ -13,5 +13,4 @@ public class exam_22_3_4 {
                 System.out.print(result[k]);
         
     }
-
 }
