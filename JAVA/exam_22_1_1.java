@@ -9,6 +9,10 @@ class Test {
     static void func2(A m){
         m.a += m.b;
     }
+    public static char[] check(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'check'");
+    }
 }
 
 public class exam_22_1_1 {
