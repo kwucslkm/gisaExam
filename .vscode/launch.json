@@ -99,8 +99,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/gisaExam/C",
-      "program": "d:/gisaExam/C/build/Debug/outDebug",
+      "cwd": "d:/gisaExam/C_exam",
+      "program": "d:/gisaExam/C_exam/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,6 +1,6 @@
-import java.sql.Connection;
 
-class Conection{
+
+class Connection{
     private static Connection _inst = null;
     private int count = 0;
     public static Connection get(){
@@ -8,6 +8,7 @@ class Conection{
             _inst = new Connection();
             return _inst;
         }
+        return _inst;
     }
     public void count(){count++;}
     public int getcount(){return count++;}
@@ -20,7 +21,7 @@ public class exam_21_3_1 {
         conn2.count();
         Connection conn3 = Connection.get();
         conn3.count();
-        System.out.print(conn1.getCount());
+        System.out.print(conn1.getcount());
 
     }
 }
