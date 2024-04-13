@@ -34,7 +34,8 @@
     - Accounting(계정관리): 사용자의 자원에 대한 사용 정보를 모아서 과금, 감사, 용량증설, 리포팅 등을 실시하는 것
 
 5. 디자인 패턴에 관한 설명에서 알맞은 답을 <보기>에서 고르시오.
-    - Abstract Factory, FactoryMetthod, Prottottype, Builder, Observer, Facade, Composite, Template Method, Singleton
+    - Abstract Factory, FactoryMetthod, Pro
+    ttottype, Builder, Observer, Facade, Composite, Template Method, Singleton
     - <보기>
         - 객체 생성 처리를 서브 클래스로 분리해 처리하도록 캡슐화하는 패턴
         - 객체의 생성 코드를 별도의 클래스/메서드로 분리함으로서 객체생성의 변화에 대비하는 데 유용하다.
