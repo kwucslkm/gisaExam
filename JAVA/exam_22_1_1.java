@@ -20,9 +20,9 @@ public class exam_22_1_1 {
         A m = new A();
         
         m.a = 100;
-        func1(m);
+        Test.func1(m);
         m.b = m.a;
-        func2(m);
+        Test.func2(m);
         System.out.printf("%d", m.a);
     }
 

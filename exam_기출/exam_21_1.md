@@ -1,3 +1,4 @@
+
 1. 물리주소( MAC Address)를 IP주소로 변화하는 프로토콜을 쓰시오.
     1. —> RARP      —> ARP, IP,  ICMP
     2. —> RIP, OSFP ,  알기
