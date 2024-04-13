@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "exam_21_3_20",
+      "request": "launch",
+      "mainClass": "exam_21_3_20",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
+      "type": "java",
       "name": "exam_22_3_20",
       "request": "launch",
       "mainClass": "exam_22_3_20",
@@ -78,8 +85,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/gisaExam/C",
-      "program": "d:/gisaExam/C/build/Debug/outDebug",
+      "cwd": "d:/gisaExam/C_exam",
+      "program": "d:/gisaExam/C_exam/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
