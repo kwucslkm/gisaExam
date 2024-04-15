@@ -1,15 +1,33 @@
-1. AAA, Triple-A라고 읽는 이 용어는 보안의 세 가지를 합쳐 축약한 용어이다. 다음에 해당하는 용어를 <보기>에서 찾아쓰시오.
+1. JAVA 언어 프로그램을 분석하여 실행 결과를 쓰시오.
     
-    <보기>
-    
-    - Authentication(인증) : 보안 기능에서, 사람이나 프로세스의 신분을 확인하는 것
-    - Authorization(인가) : 검증된 사용자에게 어떤 수준의 권한과 서비스를 허용하는 것
-    - Accounting(계정관리): 사용자의 자원에 대한 사용 정보를 모아서 과금, 감사, 용량증설, 리포팅 등을 실시하는 것
-2. 데이터 제어어(DCL)의 하나인 GRANT의 기능에 대해 간략히 서술하시오.
-    
-    —> 사용자에게 접속권한, 생성권한 등을 부여하는 명령어
-    
-3. 다음 설명하는 보안위협에서 괄호에 들어갈 알맞은 답을 쓰시오.
+    ```java
+    public class exam_21_3_20 {
+        public static void main(String[] args) {
+            Connection conn1 = Connection.getInsConnection();
+            conn1.count();
+            Connection conn2 = Connection.getInsConnection();
+            conn2.count();
+            Connection conn3 = Connection.getInsConnection();
+            conn3.count();
+            System.out.println(conn1.get()); 
+        }
+    }
+    class Connection {
+        private static Connection _in = null;
+        private static int count = 0;
+        static public Connection getInsConnection(){
+            if(_in == null){
+                Connection _in = new Connection();
+                return _in;
+            }
+            return _in;
+        }
+        public void count(){
+            count++;
+        }
+    정답 : 3
+    ```
+2. 다음 설명하는 보안위협에서 괄호에 들어갈 알맞은 답을 쓰시오.
     
     ( ARP ) 스푸핑은 MAC 주소를 속여 랜에서의 통신 흐름을 왜곡시키는 공격이다. 공격 대상 컴퓨터와 서버 사이의 트래픽을 공격자의 컴퓨터로 우회시켜 패스워드 정보 등 원하는 정보를 획득할 수 있다.
     
@@ -23,7 +41,28 @@
         - 공격대상은 정상적인 URL을 통해서 접속하지만, 실제로 가짜 사이트로 접속된다.
 
 3. 데이터 제어어(DCL)의 하나인 GRANT의 기능에 대해 간략히 서술하시오.
-    -> 데이터베이스 관리자가 데이터베이스 사용자에게 데이터베이스  접속권한, 생성권한 등을 부여하는 명령어        
+    -> 데이터베이스 관리자가 데이터베이스 사용자에게 데이터베이스  접속권한, 생성권한 등을 부여하는 명령어  
+
+4. AAA, Triple-A라고 읽는 이 용어는 보안의 세 가지를 합쳐 축약한 용어이다. 다음에 해당하는 용어를 <보기>에서 찾아쓰시오.
+    <보기>
+    - Authentication(인증) : 보안 기능에서, 사람이나 프로세스의 신분을 확인하는 것
+    - Authorization(인가) : 검증된 사용자에게 어떤 수준의 권한과 서비스를 허용하는 것
+    - Accounting(계정관리): 사용자의 자원에 대한 사용 정보를 모아서 과금, 감사, 용량증설, 리포팅 등을 실시하는 것
+
+5. 디자인 패턴에 관한 설명에서 알맞은 답을 <보기>에서 고르시오.
+    - Abstract Factory, FactoryMetthod, Pro
+    ttottype, Builder, Observer, Facade, Composite, Template Method, Singleton
+    - <보기>
+        - 객체 생성 처리를 서브 클래스로 분리해 처리하도록 캡슐화하는 패턴
+        - 객체의 생성 코드를 별도의 클래스/메서드로 분리함으로서 객체생성의 변화에 대비하는 데 유용하다.
+        - 상위클래스에서 객체를 생성하는 인터페이스에 정의하고, 하위클래스에서 인스턴스를 생성하도록 하는 방식
+        - Virtual-Constructor 패턴이라고도 함
+        
+        **—> FactoryMethod**
+
+2. 데이터 제어어(DCL)의 하나인 GRANT의 기능에 대해 간략히 서술하시오.
+    
+    —> 사용자에게 접속권한, 생성권한 등을 부여하는 명령어      
 
 4. AAA, Triple-A라고 읽는 이 용어는 보안의 세 가지를 합쳐 축약한 용어이다. 다음에 해당하는 용어를 <보기>에서 찾아쓰시오.
     
@@ -57,6 +96,7 @@
 
     - 스파게티 코드 - [프로그램](https://terms.naver.com/entry.nhn?docId=833746&ref=y)에서 제어 흐름이 마치 스파게티 면발처럼 얽혀져 있는 프로그램 코드에 붙여진 이름. GOTO문의 과다한 사용이 이러한 코딩을 유도한다.
     - 에일리언 코드  - 오래되서 출처를 알수 없어 사용하기 힘든
+
 7. c언어 실행 결과
     ```c
     #include <stdio.h>

@@ -11,7 +11,7 @@ class Connection{
         return _inst;
     }
     public void count(){count++;}
-    public int getcount(){return count++;}
+    public int getcount(){return count;}
 }
 public class exam_21_3_1 {
     public static void main(String[] args) {
