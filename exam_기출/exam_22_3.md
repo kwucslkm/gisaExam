@@ -91,10 +91,44 @@
 
 6. 경계값 분석 (Boundary Value Analysis) : 테스트 기법 중 각 영역의 경계에 해당하는
    입력값을 넣고, 예상되는 출력값이 나오는지 실제 값과 비교하는 명세 기반 테스트 기법
- 
+ * 블랙박스 테스트(Black Box Test) - 각 기능이 완전히 작동되는 것을 입증하는 테스트
+    - 동치 분할 검사(Equivalence Partitioning Testing, 동치 클래스 분해)
+    - 경계값 분석(Boundary Value Analysis)
+    - 원인-효과 그래프 검사(Cause-Effect Graphing Teshting)
+    - 오류예측 검사(Error Guessing)
+    - 비교 검사(Comparison Testing)
+ * 화이트박스 테스트(White Box Test) - 원시 코드의 논리적인 모든 경로를 테스트하여 
+  테스트 케이스를 설계하는 방법
+
 7. 쿼리 결과
-    ```
-    SELECT DISTINCT COUNT(부서코드) FROM 직원 WHERE 부서코드 = 20;
+
+    ```SQL
+    CREATE TABLE 부서(
+        부서코드 INT PRIMARY KEY,
+        부서명 VARCHAR(20)
+    );
+
+    CREATE TABLE 직원(
+        직원코드 INT PRIMARY KEY,
+        부서코드 INT,
+        직원명 VARCHAR(20),
+        FOREIGN KEY(부서코드) REFERENCES 부서(부서코드)
+            ON DELETE CASCADE
+    );
+
+    INSERT INTO 부서 VALUES(10, '영업부');
+    INSERT INTO 부서 VALUES(20, '기획부');
+    INSERT INTO 부서 VALUES(30, '개발부');
+
+    INSERT INTO 직원 VALUES(1001, 10, '이진수');
+    INSERT INTO 직원 VALUES(1002, 10, '곽연경');
+    INSERT INTO 직원 VALUES(1003, 20, '김선길');
+    INSERT INTO 직원 VALUES(1004, 20, '최민수');
+    INSERT INTO 직원 VALUES(1005, 20, '이용갑');
+    INSERT INTO 직원 VALUES(1006, 30, '박종일');
+    INSERT INTO 직원 VALUES(1007, 30, '박미경');
+
+    1. SELECT DISTINCT COUNT(부서코드) FROM 직원 WHERE 부서코드 = 20;
     ==> 3
     DELETE FROM 부서 WHERE 부서코드 = 20;
     SELECT DISTINCT COUNT(부서코드) FROM 직원;
