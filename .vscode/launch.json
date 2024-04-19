@@ -2,147 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "exam_23_1_1",
-      "request": "launch",
-      "mainClass": "exam_23_1_1",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_20_1_20",
-      "request": "launch",
-      "mainClass": "exam_20_1_20",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_20_1_19",
-      "request": "launch",
-      "mainClass": "exam_20_1_19",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_21_1_18",
-      "request": "launch",
-      "mainClass": "exam_21_1_18",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_21_1_7",
-      "request": "launch",
-      "mainClass": "exam_21_1_7",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_1_1",
-      "request": "launch",
-      "mainClass": "exam_22_1_1",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_21_3_1",
-      "request": "launch",
-      "mainClass": "exam_21_3_1",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_21_2_9_java",
-      "request": "launch",
-      "mainClass": "exam_21_2_9_java",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_21_2_17",
-      "request": "launch",
-      "mainClass": "exam_21_2_17",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_3_20",
-      "request": "launch",
-      "mainClass": "exam_22_3_20",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_23_3_19b",
-      "request": "launch",
-      "mainClass": "exam_23_3_19b",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_3_4",
-      "request": "launch",
-      "mainClass": "exam_22_3_4",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_2_17",
-      "request": "launch",
-      "mainClass": "exam_22_2_17",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_23_3_14",
-      "request": "launch",
-      "mainClass": "exam_23_3_14",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_23_3_1",
-      "request": "launch",
-      "mainClass": "exam_23_3_1",
-      "projectName": "gisaExam-1_ba92c80c"
-    },
-    {
-      "type": "java",
-      "name": "exam_23_1_20",
-      "request": "launch",
-      "mainClass": "exam_23_1_20",
-      "projectName": "gisaExam-1_cc0fc18b"
-    },
-    {
-      "type": "java",
-      "name": "exam_",
-      "request": "launch",
-      "mainClass": "exam_",
-      "projectName": "gisaExam_65b03c68"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_3_19",
-      "request": "launch",
-      "mainClass": "exam_22_3_19",
-      "projectName": "gisaExam-1_90c308da"
-    },
-    {
-      "type": "java",
-      "name": "exam_22_3_18",
-      "request": "launch",
-      "mainClass": "exam_22_3_18",
-      "projectName": "gisaExam-1_90c308da"
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/gisaExam/C_exam",
-      "program": "d:/gisaExam/C_exam/build/Debug/outDebug",
+      "cwd": "d:/gisa/gisaExam",
+      "program": "d:/gisa/gisaExam/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
