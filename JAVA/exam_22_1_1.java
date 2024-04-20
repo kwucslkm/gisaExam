@@ -9,6 +9,10 @@ class Test {
     static void func2(A m){
         m.a += m.b;
     }
+    public static char[] check(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'check'");
+    }
 }
 
 public class exam_22_1_1 {
@@ -16,9 +20,9 @@ public class exam_22_1_1 {
         A m = new A();
         
         m.a = 100;
-        func1(m);
+        Test.func1(m);
         m.b = m.a;
-        func2(m);
+        Test.func2(m);
         System.out.printf("%d", m.a);
     }
 

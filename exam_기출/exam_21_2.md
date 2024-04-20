@@ -12,6 +12,89 @@
 
 5. <학부생> 테이블에서 '입학생수'가 300이상인 튜플의 '학과번호'를 999로 갱신하는 SQL
     ==> update 학부생 set 학과번호 = 999 where 입학생수 >= 300;
+
+11. 모듈 응집도
+    - 절차적 응집도 : 내부의 요소들이 기능적으로 연관성은 없으나, 순차적으로 실행 될 때의 응집도
+    - 교환적 응집도 : 서로 다른 기능을 수행하지만 동일한 입력과 출력을 사용할 때의 응집도
+    - 기능적 응집도 : 하나의 기능에 밀접하게 관련되어 있거나 연관되어 있을 때의 응집도
+
+12. 네트워크에 관련된 설명
+    - 가상회선 : 연결형 통신에서 주로 사용되는 방식으로, 출발지와 목적지의 전송 경로를 미리 연결하여 논리적으로 고정한 후 통신하는 방식
+    - 데이터그램 : 비연결형 통신에서 주로 사용되는 방식으로, 사전에 접속 절차를 수행하지 않고 헤더에 출발지에서 목적지까지의 경로 지정을 위한 충분한 정보를 붙여서 개별적으로 전달하는 방식
+
+13. 디자인 패턴은 모듈 간의 관계 및 인터페이스를 설계할 때 참조할 수 있는 전형적인 
+    해결 방식 또는 예제를 의마한다. 그 중 행위 패턴은 클래스나 객체들이 서로 항호작용하는 방법이나 책임 분배 방법을 정의하는 패턴으로, Interpreter, Observer,
+    command 등이 그 예에 해당한다.
+
+14. 데이터베이스의 병행제어 기법 중 하나로 , 접근한 데이터에 대한 연산을 모두 마칠 때까지 추가적인 접근을 제한함으로써 상호 배타적으로 접근하여 작업을 수행하도록 하는 기법 ==> 로킹
+
+15. 소프트웨어 구성 요소를 그래픽 표기법을 이용하여 모델링하는 객체지향 분석(Object-oriented Analysis) 기법
+    - 객체 모델링(Object Modeling): 객체 다이어그램, 정보 모델링이라고도 하며 시스템에서 요구하는 객체를 찾고 객체들 간의 관계를 정의, 가장 중요하며 선행되어야 함(Information)
+    - 동적 모델링(Dynamic Modeling): 상태 다이어그램, 시간의 흐름에 따라 객체들 사이의 제어 흐름, 동작 순서 등의 동적인 행위를 표현
+    - 기능 모델링(Functional Modeling): 자료 흐름도(DFD), 프로세스들의 자료 흐름을 중심으로 처리 과정 표현
+16. c 언어 결과
+    ```c
+    #include <stdio.h>
+    main(){
+        int res = mp(2, 10);
+        printf("%d", res);
+
+    }
+    int mp(int base, int exp){
+        int res = 1;
+        for(int i=0; i<exp; i++)
+            res *= base;
+        return res;
+    }
+    ```
+17. java 언어 결화
+    ```java
+    public class exam_21_2_17 {
+        public static void main(String[] args) {
+            String result = exam_21_2_17.check(1);
+            System.out.print(result);
+        }
+        static String check(int num){
+            return num >=0 ? "positive" : "negative";
+        }
+    }
+    ```
+18. c언어 결과
+    ```c
+    #include <stdio.h>
+    int main(){
+        int ary[3];
+        int s=0;
+        *(ary+0) = 1;
+        ary[1] = *(ary+0)+2;
+        ary[2] = *ary + 3;
+        for(int i = 0; i<3 ; i++)
+            s= s+ary[i];
+        printf("%d", s);
+    }
+    ```
+19. JAVA 실행 결과 
+    
+    ```java
+    public class exam_21_2_9_java {
+        public static void main(String[] args) {
+            
+            exam_21_2_9_java c1 = new exam_21_2_9_java();
+            Class02 c2 = new Class02();
+            System.out.println(c1.sum(3,2) + c2.sum(3,2));
+        }
+        int sum(int x, int y){
+            return x+y;
+        }
+    }
+    class Class02 extends exam_21_2_9_java{
+        int sum(int x, int y){
+            return x-y + super.sum(x,y);
+        }
+    }
+    ```
+20. 통합테스트는 단위 테스트가 끝난 모듈을 통합하는 과정에서 발생하는 오류 및 결함을 
+    찾는 테스트 기법으로, 하위 모듈에서 상위 모듈 방향으로 통합하는 상향식 통합 테스트와 상위 모듈에서 하위 모듈 방향으로 통합하는 하향식 통합 테스트가 있다. 상향식 통합 테스트는 미완성이거나 문제가 있는 사위 모듈을 대체할 수 있는 테스트 드라이버가, 하향식 통합 테스트는 미완성이거나 문제가 있는 하위 모듈을 대체할 수 있는 테스트 스텁이 있어야 원활한 테스트가 가능하다.
 3. 파이썬 결과 쓰시오. —> 26
     
     ```python

@@ -1,22 +1,27 @@
 1. 형상 통제에 대해 간략히 설명하시오.
-    - 소프트웨어 형상 변경 요청을 검토하고 승인하여 현재의 베이스라인에 반영될 수 있도록 통제
+    - 소프트웨어 형상 변경 요청을 검토하고 승인하여 현재의 베이스라인에 반영될 수 있도록 식벽 - 통제 - 감사 - 기록
+
 2. 다음은 EAI 구축 유형에 대한 설명이다. 1,2에 해당하는 유형을 쓰시오.
-    
     
     | 유형 | 설명 |
     | --- | --- |
     | Point to point | - 중간에 미들웨어를 두지 않고 각 애플리케이션 간 직접 연결 
-    - 솔루션 구매 없이 통합, 상대적 저렴하게 통합 가능
-    - 변경, 재사용 어려움 |
-    | hub&spoke | - 단일 접점이 허브 시스템을 통해 데이터를 전송하는 중앙 집중적 방식
-    - 모든 데이터 전송 보장, 확장 및 유지 보수 용이
-    - 허브 장애 시 전체 영향 |
-    | Message Bus
-    (ESB 방식) | - 유연한 통합 작업이 가능
-    - 표준 통합 기술, 데이터 병목 현상 최소화 |
-    | Hybrid | - 유연한 통합 작업이 가능
-    - 표준 통합 기술, 데이터 병목 현상 최소화 |
-3. UI(User Interface)  설계 원칙 중 직관성에 대해 간략히 서술하시오.
+    |                | - 솔루션 구매 없이 통합, 상대적 저렴하게 통합 가능
+    |                | - 변경, 재사용 어려움 |
+    | --- | --- |
+    | hub&spoke      | - 단일 접점이 허브 시스템을 통해 데이터를 전송하는 중앙 집중적 방식
+    |                | - 모든 데이터 전송 보장, 확장 및 유지 보수 용이
+    |                | - 허브 장애 시 전체 영향 |
+    | --- | --- |
+    | Message Bus    | - 애플리케이션 사이 미들웨어(버스)를 두어 처리
+    | (ESB 방식)     | - 미들웨어 통한 통합
+    |                | - 어댑터가 각 시스템과 버스를 두어 연결하므로 뛰어난 확정성, 
+    |                |   대용량 처리가능
+    | --- | --- |
+    | Hybrid         |  - 표준 통합 기술, 데이터 병목 현상 최소화 |
+    |                |  - 유연한 통합 작업이 가능
+    
+3. UI(User Interface) - 설계 원칙 중 직관성에 대해 간략히 서술하시오.
     - 누구나 쉽게 이해하고 사용할 수 있어야 한다.
     
     | 설계원칙 | 설명 |
@@ -25,41 +30,55 @@
     | 유효성 | 사용자의 목적을 정확하게 달성하여야 한다. |
     | 학습성 | 누구나 쉽게 배우고 익힐 수 있어야 한다. |
     | 유연성 | 사용자의 요구사항을 최대한 수용하며, 오류를 최소화하여야 한다. |
+
 4. 다음 제어 흐름 그래프에 대한 분기 커버리지(Branch Coverage)를 수행하는 경우의 테스트 케이스 경로를 7단계와 6단계로 나눠서 순서대로 나열하시오.
     
     1→2→3→4→5→6→1
     
     1→2→4→5→6→7
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eab31b8b-8eb6-4d2d-8fd5-500d131082d5/Untitled.png)
+
+    * 코드 커버리지(Code Coverage)
+      - 조건/결정 커버리지
+        - 결정포인트 T/F, 개별조건식 T/F를 가져야 한다.
+      - 변경/조건 커버리지
+        - 모든 결정 포인트 내의 개별 조건식은 적어도 한 번 T, F를 가져야 한다.
+      - 다중 조건 커버리지
+        - 결정 포인트 내 모든 개별 조건식의 가능한 조합을 100% 보장해야한다.
+
     
 5. 소프트웨어 테스트 기법 중 소프트웨어의 기능이 완전히 작동하는 것을 입증하는 테스트로, 동치분할/경계값 분석을 이용하여 테스트 하는 기법을 쓰시오.
     - 블랙박스 테스트
         - 동등 분할 기법 - 입력 자료에 초점을 맞춰 테스트 케이스를 만들어 검사하는 방법
         - 경계값 분석 - 입력 조건의 경계값을 테스트 케이스로 선정하는 방법
-        - 원인-효과 그래프 검사 - 입력 데이터 간의 관계와 출력에 영향을 미치는 상황을 체계적으로 분석한 다음 효용성이 높은 테스트 케이스를 선정하여 검사하는 기법
+        - 원인-효과 그래프 검사 - 입력 데이터 간의 관계와 출력에 영향을 미치는 상황을 
+          체계적으로 분석한 다음 효용성이 높은 테스트 케이스를 선정하여 검사하는 기법
         - 오류 예측 검사 - 과거의 경험이나 테스터의 감각으로 테스트하는 기법
         - 비교 검사 - 여러 버전의 프로그램에 동일한 테스트 자료를 제공하여 동일한 결과가 출력되는지 테스트하는 기법
+
 6. ( alter ) table 학생 ( add ) 주소 varchar(20);
     - alter add
     - alter modify
     - alter drop
     - alter rename
-7. selet 과목이름, min(점수) as 최소점수, max(점수) as 최대점수 from 성적 group by 과목 having avg(점수) ≥ 90
+
+7.  SQL문 작성
+    ```sql
+    selet 과목이름, min(점수) as 최소점수, max(점수) as 최대점수 
+    from 성적 
+    group by 과목 
+    having avg(점수) >= 90
+    ```
 8. delete from 학생 where 이름 = ‘민수’
+
 9. 데이터베이스 스키마(Schema)에 대해 
     - 데이터베이스의 전체적인 구조와 제약조건에 대한 명세를 기술하고 정의한것이다.
     - 외부 스키마 -
     - 내부 스키마 -
     - 개념 스키마 -
+
 10. 다음에서 설명하는 관계 대수 연산의 기호르 쓰시오.
-    - 릴레이션 A에서 릴레이션 B의 모든 조건을 만족하는 튜플을 제외한 수 프로젝션하는 연산자이다. —> division(
+    - 릴레이션 A에서 릴레이션 B의 모든 조건을 만족하는 튜플을 제외한 수 프로젝션하는 연산자이다. —> division( 나누기)
     - 
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06d360df-98e1-483a-b465-c96279f057c8/Untitled.png)
-        
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dfe493be-a8af-45e2-bcc1-fe6ee7cf6b5c/Untitled.png)
     
 11. 다음 설명에 해당하는 라우팅 프로토콜을 쓰시오.
 
@@ -70,24 +89,21 @@
 
 —> OSPF
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fbd69c09-0e90-4407-8e32-5fe7af2dccf7/Untitled.png)
-
-1. 인터넷 프로토콜의 비신뢰적인 특성을 보완하기 위한 프로토콜로 IP 패킷 전송 중 에러 발생 원인을 알려주거나 네트워크 상태를 진단해주는 기능을 제공하는 프로토콜을 무엇이라고 하는지 영문 약어로 쓰시오.  —> ICMP
+12. 인터넷 프로토콜의 비신뢰적인 특성을 보완하기 위한 프로토콜로 IP 패킷 전송 중 에러 발생 원인을 알려주거나 네트워크 상태를 진단해주는 기능을 제공하는 프로토콜을 무엇이라고 하는지 영문 약어로 쓰시오.  —> ICMP
     
     ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa891f60-b253-4bdc-af30-5060960a04d5/Untitled.png)
     
-2. 헝가리안 표기법에 대해 간략히 설명하시오.
+13. 헝가리안 표기법에 대해 간략히 설명하시오.
     - 프로그래밍에서 변수앞에 타입을 붙여서 작성하는 규칙
-3. 리팩토링에 대해서 설명하시오.
+14. 리팩토링에 대해서 설명하시오.
     - 결과의 변경 없이 코드의 구조를 재조정 한다.
-4. 가장적합한용어는
-    - 심리학자 톰 마릴은 컴퓨터가 메시지를 전달하고, 메시지가 제대로 도착했는지 확인하며, 도착하지 ㅇ낳았을 경우 메시지를 재전송하는 일련의 방법을 가리켜 ‘기술적 은어’라는 뜻으로 (프로토콜)이라 불렸다.
+15. 가장적합한용어는
+    - 심리학자 톰 마릴은 컴퓨터가 메시지를 전달하고, 메시지가 제대로 도착했는지 확인하며, 도착하지 않았을 경우 메시지를 재전송하는 일련의 방법을 가리켜 ‘기술적 은어’라는 뜻으로 (프로토콜)이라 불렸다.
     - 구문, 의미 , 타이밍
-5. C 언어 실행 결과 —> 0
+16. C 언어 실행 결과 —> 0
     
     ```c
     #include <stdio.h>
-    
     void main()
     {
     	int i=0, c=0;
@@ -98,12 +114,13 @@
         }
     	printf("%d",c);
     }
+    ==> 0
     ```
     
-6. C 언어 결과 —> 234
+17. C 언어 결과 —> 234
     
     ```c
-    **#include <studio.h>
+    #include <studio.h>
     
     int r1()
     {
@@ -121,11 +138,11 @@
     {
     	printf("%d\n", r100());
         return 0;
-    }**
+    }
+    ==>
     ```
     
-7. java 출력 결과
-    
+18. java 출력 결과
     ```java
     public class Exam2 {
         public static void main(String[] args) {
@@ -142,10 +159,38 @@
         
     }
     ```
-    
+19.  java 출력 결과
+```java
+abstract class Vehicle{
+    String name;
+    abstract public String getName(String val);
+    public String getName(){
+        return "Vehicle name: " + name;
+    }
+}
+public class Test {
+    public static void main(String[] args){
+        Vehicle obj = new Car("Spark");
+        System.out.print(obj.getName());
+    }
+}
+class Car extends Vehicle {
+    private String name;
+    public Car(String val){
+        name = super.name = val;
+    }
+    public String getName(String val){
+        return "Car name: " + val;
+    }
+    public String getName(byte[] val){
+        return "Car name : " + val;
+    }
+}
+==> Vehicle name: Spark
+```
 8. java 출력 결과
 - Vehicle name : Spark
-1. 생성자(Constructor) 에 대해 간략히 설명하시오.
+20. 생성자(Constructor) 에 대해 간략히 설명하시오.
     - 생성자는 객체 생성 시 자동으로 호출되는 메서드로 멤버를 초기화하는 목적으로 주로 사용된다.
 
 ```java
