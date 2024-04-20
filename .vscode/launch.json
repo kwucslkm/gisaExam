@@ -2,14 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "exam_23_3_1",
+      "request": "launch",
+      "mainClass": "exam_23_3_1",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/gisaExam/C_exam",
-      "program": "d:/gisaExam/C_exam/build/Debug/outDebug",
+      "cwd": "d:/gisaExam/C언어_기출exam",
+      "program": "d:/gisaExam/C언어_기출exam/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

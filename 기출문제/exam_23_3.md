@@ -32,8 +32,8 @@
     ```
 2. OAuth
     ```
-    - 인터넷 애플리케이션에서 사용자 인증에 사용ㅇ되는 표준 인증 방법으로, 공개 API(OpenAPI)로 구현 되었다.
-    - 인터넷 사용자가 웹사이트나 애플리케이션에 비밀번호를 제공하지 않고 자신에게 접근 구넌한을 부여하여 사용할 수 있다.
+    - 인터넷 애플리케이션에서 사용자 인증에 사용되는 표준 인증 방법으로, 공개 API(OpenAPI)로 구현 되었다.
+    - 인터넷 사용자가 웹사이트나 애플리케이션에 비밀번호를 제공하지 않고 자신에게 접근 권한을 부여하여 사용할 수 있다.
     - 2010년 ETF에서 1.0이 공식 표준안으로 발표되었다.
     ```
 
@@ -168,7 +168,7 @@ Equivalence Partition 동치분할 기법
             name = val;
         }
         public static String get(){
-            return name;
+            return name;   <--
         }
         public void print(){
             System.out.println(name);
