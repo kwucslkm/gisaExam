@@ -144,6 +144,29 @@ Equivalence Partition 동치분할 기법
      2  
      1  
 9. C언어 결과
+    ```c
+    #include <stdio.h>
+    int isPerfectNum(int num){
+        int sum = 0;
+        for(int i=1;i<num;i++){
+            if(num%i==0)
+                sum += i;
+        }
+        if(num == sum) return 1;
+        else return 0;
+    }
+    main(){
+        int r = 0;
+        for(int i=1; i<=100; i++){
+            if(isPerfectNum(i)){
+                printf("%d ",i);    
+                r+=i;
+            }
+        }
+        printf("%d",r);
+    }
+    ==> 28
+    ```
 
 10. NAT
     - 우리말로 번역하면 '네트워크 주소 변환'이라는 의미의 영문 3글자 이다.
@@ -259,10 +282,10 @@ Equivalence Partition 동치분할 기법
     ```
 
 19. 관계 연산자
-    - join : 
-    - Project :
-    - Select
-    - Division
+    - join : 보타이 
+    - Project : 파이
+    - Select : 시그마 
+    - Division : 나누기 기호
 
 20. 무결성이란 데이터베이스에 저장된 값과 그것이 표현하는 현실 세계의 실제 값이 일치하는 정확성을 의미한다. 무결성 제약 조건은 데이터베이스에 들어이쓴 데이터의 정확성을 보장하기 위해 부정확한 자료가 데이터베이스 내에 저장되는 것을 방지하기 위한 제약 조건을 말한다.
     - 개체 무결성
