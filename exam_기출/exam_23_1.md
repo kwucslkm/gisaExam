@@ -159,15 +159,16 @@ main() {
 }
 
 ```
-15. 파이썬 
-```python
-asia={'한국', '중국', '일본'}
-asia.add('베트남')
-asia.remove('일본')
-asia.update({'한국','홍콩','태국'})
-print(asia)
-```
-==> {'한국', '중국','베트남','홍콩','태국'}
+15. 파이썬 결과
+    ```python
+    asia={'한국', '중국', '일본'}
+    asia.add('베트남')
+    asia.remove('일본')
+    asia.update({'한국','홍콩','태국'})
+    print(asia)
+    ==> {'한국', '중국','베트남','홍콩','태국'}
+    ```
+
 16. <성적> 테이블에서 과목별 점수의 평균이 90점 이상인 '과목이름', '최소점수', '최대점수'를 검색하고자 한다. <처리조건>을 참고하여 SQL을 작성하시오.
 <처리조건>
     - 최소한의 코드로 작성될 수 있도록 SQL문을 구성한다.
@@ -182,6 +183,12 @@ SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수
 FROM 성적
 GROUP BY 과목이름 
 HAVING AVG(점수) >= 90;
+```
+```sql
+select 과목이름, min(점수) as 최소점수, max(점수) as 최대점수 
+from 성적 
+group by 과목이름
+having avg(점수) >=90;
 ```
 * DML(Data Manipulation Language)
  - select

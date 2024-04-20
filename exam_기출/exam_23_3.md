@@ -1,35 +1,35 @@
 1. java 결과는
-```java
-class SuperObject{
-    public void draw(){
-        System.out.println("A");
-        draw();
+    ```java
+    class SuperObject{
+        public void draw(){
+            System.out.println("A");
+            draw();
+        }
+        public void paint(){
+            System.out.print('B');
+            draw();
+        }
     }
-    public void paint(){
-        System.out.print('B');
-        draw();
+    class SubObject extends SuperObject{
+        public void paint(){
+            super.paint();
+            System.out.print('C');
+            draw();
+        }
+        public void draw(){
+            System.out.print('D');
+        }
     }
-}
-class SubObject extends SuperObject{
-    public void paint(){
-        super.paint();
-        System.out.print('C');
-        draw();
+    public class Test{
+        public static void main(String[] args){
+            SuperObject a= new SubObject();
+            a.paint();
+            a.draw();
+        }
     }
-    public void draw(){
-        System.out.print('D');
-    }
-}
-public class Test{
-    public static void main(String[] args){
-        SuperObject a= new SubObject();
-        a.paint();
-        a.draw();
-    }
-}
 
-BDCDD
-```
+    BDCDD
+    ```
 2. OAuth
     ```
     - 인터넷 애플리케이션에서 사용자 인증에 사용ㅇ되는 표준 인증 방법으로, 공개 API(OpenAPI)로 구현 되었다.

@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "exam_23_2_14",
+      "request": "launch",
+      "mainClass": "exam_23_2_14",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
+      "type": "java",
+      "name": "exam_23_1_20",
+      "request": "launch",
+      "mainClass": "exam_23_1_20",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
+      "type": "java",
+      "name": "exam_23_1_17",
+      "request": "launch",
+      "mainClass": "exam_23_1_17",
+      "projectName": "gisaExam_65b03c68"
+    },
+    {
+      "type": "java",
       "name": "exam_21_3_20",
       "request": "launch",
       "mainClass": "exam_21_3_20",
